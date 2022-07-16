@@ -21,7 +21,6 @@ export interface HederData {
   titleHeder: string;
 }
 
-const pages = [];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function Header(props: HederData) {
@@ -88,13 +87,7 @@ function Header(props: HederData) {
               sx={{
                 display: { xs: 'block', md: 'none' },
               }}
-            >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
+            ></Menu>
           </Box>
           <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
           <Typography
@@ -115,17 +108,7 @@ function Header(props: HederData) {
           >
             Lo Nuevo
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={() => window.history.pushState('', '', '/')}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                {page}
-              </Button>
-            ))}
-          </Box>
+          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}></Box>
 
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">

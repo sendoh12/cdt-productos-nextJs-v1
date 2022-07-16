@@ -13,7 +13,7 @@ function Layout({ children }: PropsWithChildren<{}>) {
         padding: '3',
       }}
     >
-      <Header />
+      <Header titleHeder={''} />
       <Box sx={{ flex: 'auto', margin: 2 }}>{children}</Box>
       <Footer />
     </Box>
